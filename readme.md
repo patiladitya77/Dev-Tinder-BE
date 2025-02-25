@@ -1,0 +1,7 @@
+- initiaslise repo
+- nodemodules, packegae.json , paclage-lock.json
+- install express
+- create server
+- listen to port 7777
+- write request handlres
+- install nodemon and update scrips in package.json
