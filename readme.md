@@ -5,3 +5,11 @@
 - listen to port 7777
 - write request handlres
 - install nodemon and update scrips in package.json
+- what are dependencoes
+- diff. betn ~ and ^
+- what is use of "-g" while npm install
+- order of route matters
+- install postman
+- create workspace
+- test api call
+- explore routes
