@@ -29,3 +29,6 @@
 - call the connectDB function and connect the database before listening on port 7777
 - create a userSchema and usermodel
 - create post /signup API
+- explore diff. betn json and js object
+- add express.json middleware
+- make API dynamic to receive data from enduser
