@@ -28,3 +28,4 @@
 - connect your application to the databse
 - call the connectDB function and connect the database before listening on port 7777
 - create a userSchema and usermodel
+- create post /signup API
