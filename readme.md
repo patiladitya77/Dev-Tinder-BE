@@ -13,3 +13,17 @@
 - create workspace
 - test api call
 - explore routes
+- redading query params
+- reading dynamic routes
+- multiple route handlers
+- next()
+- errors with next() and multiple res.send
+- explore what is midddleware and why do we need it
+- explore how express handles requets behind the scene
+- explore http ststus code
+- explore diff. betn app.use and app.all
+- eror handling
+- create a cluster on mongodb atlas
+- install mongoose library
+- connect your application to the databse
+- call the connectDB function and connect the database before listening on port 7777
