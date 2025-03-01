@@ -32,3 +32,6 @@
 - explore diff. betn json and js object
 - add express.json middleware
 - make API dynamic to receive data from enduser
+- API get user by email
+- feed API
+- difference bten patch and put
