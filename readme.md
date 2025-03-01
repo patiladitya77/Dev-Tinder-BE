@@ -38,3 +38,4 @@
 - explore schematype options from documentation
 - add constraints
 - add timestamps
+- add api level validations
