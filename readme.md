@@ -35,3 +35,6 @@
 - API get user by email
 - feed API
 - difference bten patch and put
+- explore schematype options from documentation
+- add constraints
+- add timestamps
