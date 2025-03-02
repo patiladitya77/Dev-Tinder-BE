@@ -42,3 +42,5 @@
 - install validator
 - use validator functions
 - validation for password and photoURl remaining
+
+- NEVER TRUST req.body
