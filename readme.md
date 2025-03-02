@@ -39,3 +39,6 @@
 - add constraints
 - add timestamps
 - add api level validations
+- install validator
+- use validator functions
+- validation for password and photoURl remaining
