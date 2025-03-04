@@ -62,3 +62,7 @@
 - create userschema method to compare password
 
 - group multiple routes under respective routes
+- explore documentation for express router
+- create routes folder
+- create auth,profile,request router
+- import in app.js
