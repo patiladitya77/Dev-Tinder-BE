@@ -66,3 +66,7 @@
 - create routes folder
 - create auth,profile,request router
 - import in app.js
+
+- creare post /logout api
+- create patch /profile/edit api
+- create patch /profile/password api //forgot password api

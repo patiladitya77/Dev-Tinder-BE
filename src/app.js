@@ -1,13 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/database");
-const User = require("./models/user");
-const { validateSignUpData } = require("./utils/validation");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+
 const cookieparser = require("cookie-parser");
-const { userAuth } = require("./middlewares/auth");
-
-
 
 const app = express();  //creating instance of express js application
 app.use(express.json());
@@ -20,15 +14,6 @@ const requestRouter = require("./routes/requests");
 app.use("/", authRouter);
 app.use("/", profileRouter);
 app.use("/", requestRouter);
-
-
-
-
-
-
-
-
-
 
 
 connectDB().then(() => {
