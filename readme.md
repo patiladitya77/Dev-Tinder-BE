@@ -60,4 +60,5 @@
 - set the expiry of jwt token and cookies
 - create userschema mehtod to get jwt
 - create userschema method to compare password
--
+
+- group multiple routes under respective routes
