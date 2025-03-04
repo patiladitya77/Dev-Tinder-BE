@@ -55,3 +55,9 @@
 - intall jsonwebtoken
 - in login api, after email and password validation, cretae a jwt token and send it to user
 - read the cookies inise profile API and find the logged in user
+- userAuth middleware
+- add the userAuth middleware
+- set the expiry of jwt token and cookies
+- create userschema mehtod to get jwt
+- create userschema method to compare password
+-

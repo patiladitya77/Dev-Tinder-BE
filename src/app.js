@@ -2,7 +2,7 @@ const express = require("express");
 const connectDB = require("./config/database");
 const User = require("./models/user");
 const { validateSignUpData } = require("./utils/validation");
-const bcyprt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cookieparser = require("cookie-parser");
 const { userAuth } = require("./middlewares/auth");
@@ -20,7 +20,7 @@ app.post("/signup", async (req, res) => {
         validateSignUpData(req);
 
         //encryption of password
-        const passwordHash = await bcyprt.hash(password, 10);
+        const passwordHash = await bcrypt.hash(password, 10);
 
         //creating a new instance of user
         const user = new User({ firstName, lastName, emailId, password: passwordHash });
@@ -40,10 +40,10 @@ app.post("/login", async (req, res) => {
         if (!user) {
             throw new Error("invalid credentials");
         }
-        const isPasswordValid = await bcyprt.compare(password, user.password);
+        const isPasswordValid = await user.validatePassword(password);
         if (isPasswordValid) {
             //create a token
-            const token = jwt.sign({ _id: user._id }, "jaggery", { expiresIn: "7d" });
+            const token = await user.getJWT();
 
             //sending cookie back to user
             res.cookie("token", token, { expires: new Date(Date.now() + 8 * 3600000) });
