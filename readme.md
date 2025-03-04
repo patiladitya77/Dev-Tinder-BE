@@ -44,3 +44,14 @@
 - validation for password and photoURl remaining
 
 - NEVER TRUST req.body
+
+- validate data in signup API
+- install bcryt library
+- create passwordhash and encrypt user
+
+- install cookie-pareser
+- send dummy cookie to user
+- create profile api and check if user gets the cookie back
+- intall jsonwebtoken
+- in login api, after email and password validation, cretae a jwt token and send it to user
+- read the cookies inise profile API and find the logged in user
