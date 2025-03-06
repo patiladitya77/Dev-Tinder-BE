@@ -70,3 +70,10 @@
 - creare post /logout api
 - create patch /profile/edit api
 - create patch /profile/password api //forgot password api
+
+- create connectionrequestSchema
+- connection request api
+- proper validation of data, think about all corner cases
+- schema.pre function
+- read about indexing in mongoDB
+- why do we need index? adv and disadv of index
