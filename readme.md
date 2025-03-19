@@ -77,3 +77,9 @@
 - schema.pre function
 - read about indexing in mongoDB
 - why do we need index? adv and disadv of index
+
+- /request/review/:status/:requestId
+- thought process post vs get
+- read about ref and populate
+- write code for /users/request/received API for getting pending request of loggedin user
+- /users/connections

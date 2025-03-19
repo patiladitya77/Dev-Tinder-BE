@@ -7,7 +7,7 @@ const authRouter = express.Router();
 
 authRouter.post("/signup", async (req, res) => {
     try {
-        const { firstName, lastName, emailId, password } = req.body;
+        const { firstName, lastName, emailId, password, age, gender, about, photoURL } = req.body;
 
         //validaton of data
         validateSignUpData(req);
@@ -16,7 +16,7 @@ authRouter.post("/signup", async (req, res) => {
         const passwordHash = await bcrypt.hash(password, 10);
 
         //creating a new instance of user
-        const user = new User({ firstName, lastName, emailId, password: passwordHash });
+        const user = new User({ firstName, lastName, emailId, password: passwordHash, age, gender, about, photoURL });
 
         await user.save();
         res.send("data added successfully");
@@ -31,7 +31,7 @@ authRouter.post("/login", async (req, res) => {
         const { emailId, password } = req.body;
         const user = await User.findOne({ emailId: emailId });
         if (!user) {
-            throw new Error("invalid credentials");
+            return res.status(401).send("invalid credentials");
         }
         const isPasswordValid = await user.validatePassword(password);
         if (isPasswordValid) {
@@ -41,9 +41,9 @@ authRouter.post("/login", async (req, res) => {
             //sending cookie back to user
             res.cookie("token", token, { expires: new Date(Date.now() + 8 * 3600000) });
 
-            res.send("Login successfull");
+            res.send(user);
         } else {
-            throw new Error("Invalid credentials");
+            return res.status(401).send("invalid credentials");;
         }
 
 

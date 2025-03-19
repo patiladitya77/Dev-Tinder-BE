@@ -15,11 +15,11 @@ profileRouter.get("/profile/view", userAuth, async (req, res) => {
     }
 });
 
-profileRouter.patch("/profile/edit", userAuth, async (req, res) => {
+profileRouter.put("/profile/edit", userAuth, async (req, res) => {
     try {
-        if (!validateEditProfileData(req)) {
-            throw new Error("Cannot update ");
-        }
+        // if (!validateEditProfileData(req)) {
+        //     return res.status(401).send("cannot update");
+        // }
         const loggedInUser = req.user;
         Object.keys(req.body).forEach((key) => (loggedInUser[key] = req.body[key]));
         await loggedInUser.save();
