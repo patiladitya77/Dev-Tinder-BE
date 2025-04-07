@@ -83,3 +83,9 @@
 - read about ref and populate
 - write code for /users/request/received API for getting pending request of loggedin user
 - /users/connections
+
+- npm i dotenv
+- create .env file in root level
+- create env variables
+- instead of string process.env.KEY_NAME
+- require("dotenv").config(); in app.js
