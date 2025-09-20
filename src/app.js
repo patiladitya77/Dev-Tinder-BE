@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const app = express();  //creating instance of express js application
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://dev-tinder-fe.onrender.com/",
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true
 }));
